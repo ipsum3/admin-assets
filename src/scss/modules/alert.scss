@@ -1,0 +1,14 @@
+.alert {
+   
+    &-icon {
+        display: table-cell;
+        padding-right: 1rem;
+        font-size: 2rem;
+        vertical-align: middle;
+    }
+
+    &-text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
