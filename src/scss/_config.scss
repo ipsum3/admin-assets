@@ -3,7 +3,7 @@
 
 // Shade generator : https://maketintsandshades.com
 $white:    #fff;
-$gray-50: #f4f4f4;
+$gray-50: #f4f4f4; // TODO vérifier
 $gray-100: #EDEDED;
 $gray-150: #DCDBDB;
 $gray-200: #CAC8C9;
@@ -65,6 +65,16 @@ $body-color: $gray-500;
 //$link-color: $secondary;
 
 
+// Components
+//
+
+$border-color:                $gray-150 !default;
+
+$border-radius:               .175rem !default;
+$border-radius-lg:            .2.5rem !default;
+$border-radius-sm:            .1.5rem !default;
+
+
 // Typography
 
 $font-size-base:              .85rem;
@@ -94,6 +104,46 @@ $pagination-padding-x-sm:           .5rem;
 $pagination-padding-y-lg:           .75rem;
 $pagination-padding-x-lg:           1.5rem;
 $pagination-line-height:            1.25;
+
+
+// Tables
+//
+
+$table-cell-padding:          .65rem !default;
+$table-border-color:          $gray-100 !default;
+$table-striped-order:         even !default;
+
+
+// Buttons + Forms
+//
+
+$input-btn-padding-y:         .3rem !default;
+$input-btn-padding-x:         .55rem !default;
+
+
+// Forms
+//
+
+$input-disabled-bg:                     $gray-100 !default;
+
+$input-color:                           $body-color !default;
+$input-border-color:                    $gray-150 !default;
+
+
+// Pagination
+//
+
+$pagination-color:                  $body-color !default;
+$pagination-border-color:           $gray-100 !default;
+
+$pagination-hover-color:            $body-color !default;
+$pagination-hover-bg:               $gray-150 !default;
+$pagination-hover-border-color:     $gray-150 !default;
+
+$pagination-active-bg:              $gray-200 !default;
+
+$pagination-disabled-border-color:  $gray-100 !default;
+$pagination-disabled-color:         $gray-400 !default;
 
 // icons
 $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
