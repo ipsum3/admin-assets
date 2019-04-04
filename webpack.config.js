@@ -21,7 +21,7 @@ let config = {
     ] 
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, (isDevelopment ? 'tests/' : '') + 'dist'),
     filename: '[name].js',
     //publicPath: ASSET_PATH
   },
@@ -113,10 +113,9 @@ let config = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    // TODO in production only ?
-    //new CleanWebpackPlugin(),
     new FileIncludeWebpackPlugin({
       source: './src/html/pages',
+      destination: '../examples'
     }),
     new WebpackNotifierPlugin(),
   ],
@@ -140,6 +139,8 @@ let config = {
   }
 }
 
-
+if (isProduction) {
+  config.plugins.push(new CleanWebpackPlugin());
+}
 
 module.exports = config

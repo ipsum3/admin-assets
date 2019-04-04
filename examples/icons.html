@@ -8,7 +8,11 @@
 
     <title>Administration</title>
 
-    <link rel="stylesheet" href="main.css">
+    <!-- Optional CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/solid.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../dist/main.css">
 </head>
 <body>
     <div class="l-global">
@@ -161,8 +165,7 @@
             </ul>
         </nav>
 
-        <main role="main" class="main container-fluidzz">
-            <div class="rowzz">
+        <main role="main" class="main">
 
 
 <h1 class="main-title">Icons</h1>
@@ -197,18 +200,12 @@ icons.forEach(function(element) {
     html = html + '<div class="col-md-2 col-sm-3 py-2 text-center"><i class="h1 fas fa-'+element+'"></i><br><span class="text-muted">'+element+'</div></div>'
 });
 
-console.log(html)
-
-//$('#icons-wp').html(html)
-
 var node = document.getElementById('icons-wp');
-console.log(node)
 node.innerHTML = html;
 
 </script>
 
 
-            </div>
         </main>
         <div class="footer l-global-footer-a">
 
@@ -218,7 +215,7 @@ node.innerHTML = html;
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="../dist/main.js"></script>
 
     </body>
 </html>

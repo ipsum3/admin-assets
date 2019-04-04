@@ -1,3 +1,5 @@
+$use-cdn: true !default;
+
 // Variables
 //
 
@@ -71,12 +73,13 @@ $body-color: $gray-500;
 $border-color:                $gray-150 !default;
 
 $border-radius:               .175rem !default;
-$border-radius-lg:            .2.5rem !default;
-$border-radius-sm:            .1.5rem !default;
+$border-radius-lg:            .25rem !default;
+$border-radius-sm:            .15rem !default;
 
 
 // Typography
 
+$font-family-base:            'Poppins' !default;
 $font-size-base:              .85rem;
 $h1-font-size:                $font-size-base * 1.5;
 $h2-font-size:                $font-size-base * 1.4;
