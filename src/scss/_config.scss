@@ -38,11 +38,9 @@ $green:   #6DC70C;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 
-/*$beige:   #d7d29d;
-
 $colors: (
-    'beige' :$beige
-);*/
+    'gray':   $gray-500
+);
 
 $primary:       #0b6992; //#352b92;
 $secondary:     #55c3f1;
@@ -52,6 +50,10 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-800;*/
+
+$theme-colors: (
+    'gray':   $gray-500,
+);
 
 
 // Body
@@ -131,6 +133,8 @@ $input-disabled-bg:                     $gray-100 !default;
 
 $input-color:                           $body-color !default;
 $input-border-color:                    $gray-150 !default;
+
+$input-placeholder-color:               $gray-350 !default;
 
 
 // Pagination
