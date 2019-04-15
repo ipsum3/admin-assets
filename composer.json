@@ -1,0 +1,23 @@
+{
+    "name": "ipsum3/admin-assets",
+    "description": "Ipsum Admin Assets - admin control panel and dashboard that's based on Bootstrap 4",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "B1nj",
+            "email": "postmaster@b1nj.fr"
+        }
+    ],
+    "type": "template",
+    "keywords": [
+        "css",
+        "js",
+        "sass",
+        "responsive",
+        "back-end",
+        "template",
+        "theme",
+        "boostrap",
+        "admin"
+    ],
+}
