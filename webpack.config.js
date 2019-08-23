@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const FileIncludeWebpackPlugin = require('file-include-webpack-plugin')
-const WebpackNotifierPlugin = require('webpack-notifier');
+const WebpackNotifierPlugin = require('webpack-notifier')
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isProduction = process.env.NODE_ENV === 'production'
-const ASSET_PATH = process.env.ASSET_PATH || './dist/'
+const ASSET_PATH = process.env.ASSET_PATH || '../dist/'
 
 
 let config = {
@@ -17,13 +17,16 @@ let config = {
     main: [
       // css before js 
       './src/scss/style.scss',
-      './src/js/index.js',
-    ] 
+      './src/js/index.js'
+    ],
+    tinymce: [
+      './src/js/tinymce.js'
+    ]
   },
   output: {
     path: path.resolve(__dirname, (isDevelopment ? 'tests/' : '') + 'dist'),
     filename: '[name].js',
-    //publicPath: ASSET_PATH
+    publicPath: ASSET_PATH
   },
   watch: isDevelopment,
   watchOptions: {

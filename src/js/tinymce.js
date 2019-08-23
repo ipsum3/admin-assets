@@ -20,7 +20,7 @@ require.context(
 )
 
 tinymce.init({
-    selector: '#mytextarea',
+    selector: '.tinymce',
     plugins: 'code paste autolink fullscreen link lists media image',
     toolbar: 'bold italic bullist numlist removeformat | formatselect | link image media | code fullscreen',
     menubar: '',
@@ -37,4 +37,13 @@ tinymce.init({
     object_resizing: false,
     block_formats: 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Preformatted=pre',
     fix_list_elements: true
+})
+
+tinymce.init({
+    selector: '.tinymce-simple',
+    plugins: 'code paste autolink link',
+    toolbar: 'bold italic removeformat | link | code',
+    menubar: '',
+    paste_as_text: true,
+    branding: false
 })

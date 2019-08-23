@@ -1,7 +1,11 @@
 {
   "name": "ipsum3-admin-assets",
   "version": "1.0.0",
-  "description": "",
+  "description": "Assets for Ipsum3 admin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipsum3/admin-assets.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development webpack",
@@ -40,10 +44,16 @@
     "webpack-notifier": "^1.7.0"
   },
   "dependencies": {
+    "@uppy/core": "^1.2.0",
+    "@uppy/drag-drop": "^1.2.0",
+    "@uppy/locales": "^1.5.0",
+    "@uppy/progress-bar": "^1.2.0",
+    "@uppy/xhr-upload": "^1.2.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "tinymce": "^5.0.14",
+    "update": "^0.7.4",
     "wfk-poppins": "^1.0.0"
   },
   "optionalDependencies": {

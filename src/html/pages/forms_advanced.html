@@ -10,8 +10,34 @@
         <div class="box-body">
             <div class="form-group">
                 <label>Editeur</label>
-                <textarea id="mytextarea" name="mytextarea">Hello, World!</textarea>
+                <textarea class="tinymce" name="mytextarea">Hello, World!</textarea>
             </div>
+            <div class="form-group">
+                <label>Editeur simple</label>
+                <textarea class="tinymce-simple" name="mytextarea">Hello, World!</textarea>
+                <script src="../dist/tinymce.js"></script>
+            </div>
+
+
+            <div class="example-one">
+                <h5>Upload Files</h5>
+
+                <!-- Target DOM node #1 -->
+                <div class="for-DragDrop"></div>
+
+                <!-- Progress bar #1 -->
+                <div class="for-ProgressBar"></div>
+
+                <!-- Alerts message #1 -->
+                <div class="alerts"></div>
+
+                <!-- Uploaded files list #1 -->
+                <div class="uploaded-files">
+                    <h5>Uploaded files:</h5>
+                    <ol></ol>
+                </div>
+            </div>
+            <link href="https://transloadit.edgly.net/releases/uppy/v1.3.0/uppy.min.css" rel="stylesheet">
         </div>
         <div class="box-footer">
             <div><button class="btn btn-outline-secondary" type="reset">Cancel</button></div>
