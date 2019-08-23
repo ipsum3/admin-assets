@@ -1,6 +1,7 @@
 // import 'popper.js'
 import 'jquery'
 import 'bootstrap'
+import './tinymce'
 
 // import log from './log.js'
 
