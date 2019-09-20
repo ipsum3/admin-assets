@@ -1,0 +1,62 @@
+.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid $gray-100;
+    margin: .5rem;
+    padding : 2px;
+
+    &-img {
+        min-width: 130px;
+    }
+
+    &-icone {
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+        font-size: 3rem;
+        text-align: center;
+        color: $gray-100;
+    }
+
+    &-title {
+        position: absolute;
+        top: 2px;
+        width: calc(100% - 4px);
+        padding: 0.2rem 0.5rem;
+        background: rgba(0, 0 , 0, 0.3);
+        color: white;
+        font-size: 0.8em;
+
+        display: none;
+    }
+    &:hover &-title {
+        display: block;
+    }
+
+    &-toolbar {
+        color: $gray-300;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            margin : 0.2rem 0;
+            @extend .list-unstyled;
+        }
+
+        li {
+        }
+
+        a {
+            color: $gray-300;
+        }
+
+        button {
+            border: 0 none;
+            background: transparent;
+            color: $gray-300;
+        }
+    }
+
+}

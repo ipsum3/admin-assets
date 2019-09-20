@@ -1,0 +1,18 @@
+.sortable {
+    &-move {
+        cursor: move;
+        cursor: -webkit-grabbing;
+    }
+
+    &-ghost {
+        border: 1px solid $gray-300;
+    }
+
+    &-chosen {
+
+    }
+
+    &-drag {
+
+    }
+}

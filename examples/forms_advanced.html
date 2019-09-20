@@ -129,6 +129,12 @@
                     </ul>
                 </li>
                 <li>
+                    <a class="menu-link" href="media_gallery.html">
+                        <i class="menu-link-icon fas fa-calendar-alt"></i>
+                        <span class="menu-link-text">Media gallery</span>
+                    </a>
+                </li>
+                <li>
                     <a class="menu-link" href="#">
                         <i class="menu-link-icon fas fa-calendar-alt"></i>
                         <span class="menu-link-text">Calendar</span>
@@ -187,25 +193,44 @@
             </div>
 
 
-            <div class="example-one">
-                <h5>Upload Files</h5>
+            <div class="upload" data-uploadendpoint="http://localhost" data-uploadmedias="../datas/medias.json" data-uploadrepertoire="repertoire" data-uploadpublicationid="10" data-uploadpublicationtype="type">
+                <h3>Upload Files</h3>
 
                 <!-- Target DOM node #1 -->
-                <div class="for-DragDrop"></div>
+                <div class="upload-DragDrop"></div>
 
                 <!-- Progress bar #1 -->
-                <div class="for-ProgressBar"></div>
+                <div class="upload-ProgressBar"></div>
 
                 <!-- Alerts message #1 -->
-                <div class="alerts"></div>
+                <div class="upload-alerts mt-3"></div>
 
                 <!-- Uploaded files list #1 -->
-                <div class="uploaded-files">
-                    <h5>Uploaded files:</h5>
-                    <ol></ol>
+                <div class="mt-3">
+                    <h4>Uploaded files:</h4>
+                    <div class="d-flex flex-row flex-wrap sortable upload-files" data-sortableurl="test.php">
+                    </div>
+                    <script class="upload-template" type="x-tmpl-mustache">
+                        <div class="media" data-sortable="{{ id }}">
+                            <div class="media-img">
+                                <img src="{{ url }}" alt="">
+                            </div>
+                            <div class="media-title">
+                                {{ titre }}
+                            </div>
+                            <div class="media-toolbar">
+                                <ul>
+                                    <li><a href="#" title="modifier"><span class="fa fa-edit"></span></a></li>
+                                    <li><a href="#" class="Supprimer"><span class="fa fa-trash-alt"></span></a></li>
+                                    <li class="sortable-move" title="Trier"><span class="fa fa-arrows-alt"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
                 </div>
             </div>
-            <link href="https://transloadit.edgly.net/releases/uppy/v1.3.0/uppy.min.css" rel="stylesheet">
+            <link href="../dist/uppy.css" rel="stylesheet">
+            <script src="../dist/uppy.js"></script>
         </div>
         <div class="box-footer">
             <div><button class="btn btn-outline-secondary" type="reset">Cancel</button></div>
