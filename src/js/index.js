@@ -14,4 +14,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+
+    $('.btn-danger, .btn-outline-danger').click(function () {
+        if (!window.confirm('Souhaitez-vous confirmer ?')) {
+            return false
+        }
+    })
 })
