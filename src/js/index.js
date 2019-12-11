@@ -5,6 +5,7 @@ import './sortable'
 import 'mustache'
 import './modal'
 import './media'
+import './select2'
 
 // import log from './log.js'
 
