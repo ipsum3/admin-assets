@@ -35,7 +35,7 @@ tinymce.init({
     ],
     image_dimensions: false,
     object_resizing: false,
-    block_formats: 'Paragraph=p Heading 2=h2 Heading 3=h3 Heading 4=h4 Preformatted=pre',
+    block_formats: 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Preformatted=pre',
     fix_list_elements: true,
     relative_urls: false,
     document_base_url: document.location.origin,

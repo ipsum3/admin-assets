@@ -28,8 +28,8 @@ let config = {
         ]
     },
     output: {
-        // path: path.resolve(__dirname, (isDevelopment ? 'tests/' : '') + 'dist'),
-        path: path.resolve(__dirname, (isDevelopment ? '' : '') + 'dist'),
+        path: path.resolve(__dirname, (isDevelopment ? 'tests/' : '') + 'dist'),
+        // path: path.resolve(__dirname, (isDevelopment ? '' : '') + 'dist'),
         filename: '[name].js',
         publicPath: ASSET_PATH
     },
