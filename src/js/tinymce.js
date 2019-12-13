@@ -25,6 +25,7 @@ tinymce.init({
     toolbar: 'bold italic bullist numlist removeformat | formatselect | link medias media | code fullscreen',
     menubar: '',
     paste_as_text: true,
+    entity_encoding: 'raw',
     height: 500,
     branding: false,
     target_list: false,
