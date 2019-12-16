@@ -68,5 +68,6 @@ tinymce.init({
     paste_as_text: true,
     branding: false,
     forced_root_block: '',
-    statusbar: false
+    statusbar: false,
+    entity_encoding: 'raw'
 })
