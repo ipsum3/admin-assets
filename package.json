@@ -51,7 +51,7 @@
     "@uppy/progress-bar": "^1.2.0",
     "@uppy/xhr-upload": "^1.2.0",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "mustache": "^3.1.0",
     "popper.js": "^1.14.7",
     "select2": "^4.0.12",
