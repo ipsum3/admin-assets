@@ -33,6 +33,7 @@ document.querySelectorAll('.upload').forEach(function (upload) {
             publication_id: upload.dataset.uploadpublicationid,
             publication_type: upload.dataset.uploadpublicationtype,
             repertoire: upload.dataset.uploadrepertoire,
+            path: upload.dataset.uploadpath === undefined ? '' : upload.dataset.uploadpath,
             groupe: upload.dataset.uploadgroupe,
             _token: upload.dataset.uploadcsrftoken
         }

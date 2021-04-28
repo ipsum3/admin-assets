@@ -1,7 +1,7 @@
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const FileIncludeWebpackPlugin = require('file-include-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
@@ -83,7 +83,7 @@ let config = {
                             ident: 'postcss',
                             plugins: (loader) => [
                                 require('autoprefixer')({
-                                    browsers: ['last 2 versions', 'ie > 10']
+                                    overrideBrowserslist: ['last 2 versions', 'ie > 10']
                                 })
                             ],
                             sourceMap: true
