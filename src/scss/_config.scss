@@ -34,7 +34,7 @@ $pink:    #e83e8c;
 $red:     #a60000; 
 $orange:  #fd7e14;
 $yellow:  #ffc107;
-$green:   #6DC70C;
+$green:   #86c00b;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 
@@ -44,16 +44,19 @@ $colors: (
 
 $primary:       #0b6992; //#352b92;
 $secondary:     #55c3f1;
+$light:         $gray-150;
 /*$success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $gray-100;
 $dark:          $gray-800;*/
 
 $theme-colors: (
     'gray':   $gray-500,
 );
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  180 !default;
 
 
 // Body
@@ -154,3 +157,9 @@ $pagination-disabled-color:         $gray-400 !default;
 
 // icons
 $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+
+
+// Badges
+
+$badge-font-size:                   100% !default;
+$badge-font-weight:                 normal !default;
