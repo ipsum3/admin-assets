@@ -6,6 +6,7 @@ import 'mustache'
 import './modal'
 import './media'
 import './select2'
+import './hamburger'
 
 // import log from './log.js'
 

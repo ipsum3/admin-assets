@@ -1,0 +1,23 @@
+.hamburger {
+    border: 0 none;
+    padding-right: 20px;
+    font-size: 30px;
+    background-color: $gray-550;
+    color: white;
+
+    .fa-times {
+        display: none;
+    }
+
+
+    .menu-is-open & {
+        .fa-bars {
+            display: none;
+        }
+        .fa-times {
+            display: block;
+        }
+    }
+}
+
+
