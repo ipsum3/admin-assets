@@ -4,7 +4,7 @@ const DragDrop = require('@uppy/drag-drop')
 const ProgressBar = require('@uppy/progress-bar')
 const French = require('@uppy/locales/lib/fr_FR')
 
-document.querySelectorAll('.upload').forEach(function (upload) {
+window.uppyInit = function (upload) {
     function renderMedia () {
         let xhr = new window.XMLHttpRequest()
 
@@ -77,4 +77,8 @@ document.querySelectorAll('.upload').forEach(function (upload) {
     uppy.on('restriction-failed', (file, error) => {
         upload.querySelector('.upload-alerts').insertAdjacentHTML('beforeend', `<div class="alert alert-warning">${file.name} : ${error}</div>`)
     })
+}
+
+document.querySelectorAll('.upload').forEach(function (upload) {
+    window.uppyInit(upload)
 })
