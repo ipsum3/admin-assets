@@ -58,7 +58,8 @@
     "sortablejs": "^1.15.0",
     "tinymce": "5.0.14",
     "update": "^0.7.4",
-    "wfk-poppins": "^1.0.0"
+    "wfk-poppins": "^1.0.0",
+    "daterangepicker": "^3.1.0"
   },
   "optionalDependencies": {
     "win-node-env": "^0.4.0"
