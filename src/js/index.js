@@ -7,6 +7,7 @@ import './modal'
 import './media'
 import './select2'
 import './hamburger'
+import './article'
 import './datepicker'
 
 // import log from './log.js'
