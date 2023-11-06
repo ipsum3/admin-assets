@@ -66,6 +66,7 @@
 @import "modules/form";
 @import "modules/media";
 @import "modules/sortable";
+@import "modules/inbox";
 
 // Trumps
 @import "~bootstrap/scss/utilities/align";
@@ -88,6 +89,7 @@
 
 @import "~select2/src/scss/core";
 @import '~daterangepicker/daterangepicker';
+@import '~cropperjs/dist/cropper';
 
 @import "helpers";
 
