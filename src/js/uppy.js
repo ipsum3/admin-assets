@@ -1,8 +1,8 @@
-const Uppy = require('@uppy/core')
-const XHRUpload = require('@uppy/xhr-upload')
-const DragDrop = require('@uppy/drag-drop')
-const ProgressBar = require('@uppy/progress-bar')
-const French = require('@uppy/locales/lib/fr_FR')
+import Uppy from '@uppy/core'
+import XHRUpload from '@uppy/xhr-upload'
+import DragDrop from '@uppy/drag-drop'
+import ProgressBar from '@uppy/progress-bar'
+import French from '@uppy/locales/lib/fr_FR'
 
 window.uppyInit = function (upload) {
     function renderMedia () {
@@ -47,10 +47,12 @@ window.uppyInit = function (upload) {
             'X-Requested-With': `XMLHttpRequest`
         }
     })
+
     uppy.use(DragDrop, {
         target: upload.querySelector('.upload-DragDrop'),
         note: upload.dataset.uploadnote
     })
+
     uppy.use(ProgressBar, {
         target: upload.querySelector('.upload-ProgressBar'),
         hideAfterFinish: false
