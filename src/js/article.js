@@ -1,11 +1,13 @@
 import * as $ from 'jquery'
 import Mustache from 'mustache'
+import { configTinymceSimple, configTinymce } from './tinymce_config'
 
 $('#add-bloc_btn').click(function () {
     const type = $('#type_bloc').val()
     const articleid = $(this).data('article')
     if (type !== '') {
         window.tinymce.remove('.tinymce-simple')
+        window.tinymce.remove('.tinymce')
         console.log('add bloc ' + type)
         let template = $('#customBlocs-' + type + '-template').html()
         Mustache.parse(template)
@@ -18,7 +20,7 @@ $('#add-bloc_btn').click(function () {
         initMedia()
         removeBloc()
         copyCustomFieldRepeater()
-        createMediaInput()
+        // createMediaInput()
         $('.upload_custom').on('change', function () {
             setTimeout(function () { createMediaInput() }, 1000)
         })
@@ -74,7 +76,6 @@ function copyCustomFieldRepeater () {
 }
 
 function createMediaInput () {
-    console.log('init media inputs')
     $('.upload_custom').each(function (index) {
         let dom = $(this)
         let uploadgroupe = $(this).data('uploadgroupe') + '[]'
@@ -94,22 +95,11 @@ function createMediaInput () {
 }
 
 function createTinymce () {
-    // TODO partager la config tinymce avec le fichier tinymce.js
-    window.tinymce.init({
-        selector: '.tinymce-simple',
-        plugins: 'code paste autolink link',
-        toolbar: 'bold italic removeformat | link | code',
-        menubar: '',
-        paste_as_text: true,
-        branding: false,
-        forced_root_block: '',
-        statusbar: false,
-        entity_encoding: 'raw'
-    })
+    window.tinymce.init(configTinymce)
+    window.tinymce.init(configTinymceSimple)
 }
 
 function initMedia () {
-    console.log('init media')
     $('.upload_custom').each(function () {
         if (!$(this).data('initialized')) {
             window.uppyInit(this)
