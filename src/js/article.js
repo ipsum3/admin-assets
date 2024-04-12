@@ -6,8 +6,6 @@ $('#add-bloc_btn').click(function () {
     const type = $('#type_bloc').val()
     const articleid = $(this).data('article')
     if (type !== '') {
-        window.tinymce.remove('.tinymce-simple')
-        window.tinymce.remove('.tinymce')
         console.log('add bloc ' + type)
         let template = $('#customBlocs-' + type + '-template').html()
         Mustache.parse(template)
@@ -52,7 +50,6 @@ function removeBloc () {
 
 function copyCustomFieldRepeater () {
     $('.copy-custom-field-btn').on('click', function () {
-        window.tinymce.remove('.tinymce-simple')
 
         let dom = $(this).parent().parent().parent()
         let template = $('#customFields-clone' + $(this).data('field_id') + '-template').html()
@@ -90,6 +87,8 @@ function createMediaInput () {
 }
 
 function createTinymce () {
+    window.tinymce.remove('.tinymce-simple')
+    window.tinymce.remove('.tinymce')
     window.tinymce.init(configTinymce)
     window.tinymce.init(configTinymceSimple)
 }
