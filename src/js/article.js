@@ -46,12 +46,7 @@ function removeBloc () {
     })
 
     $('.remove-repeater').click(function () {
-        let dom = $(this).parent().parent().parent()
-        // eslint-disable-next-line no-undef
-        if (confirm('Êtes-vous sûre de vouloir supprimer ce bloc ?') === true) {
-            // On garde la div pour pouvoir compter le prochain groupe lors de la duplication
-            dom.html('')
-        }
+        $(this).closest('.sortable-item').remove()
     })
 }
 
