@@ -50,7 +50,6 @@ function removeBloc () {
 
 function copyCustomFieldRepeater () {
     $('.copy-custom-field-btn').on('click', function () {
-
         let dom = $(this).parent().parent().parent()
         let template = $('#customFields-clone' + $(this).data('field_id') + '-template').html()
         Mustache.parse(template)
