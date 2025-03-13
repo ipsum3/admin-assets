@@ -20,6 +20,9 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 
     $('.btn-danger, .btn-outline-danger').click(function () {
+        if ($(this).data('confirm') === false) {
+            return true
+        }
         if (!window.confirm('Souhaitez-vous confirmer ?')) {
             return false
         }
