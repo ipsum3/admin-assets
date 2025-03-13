@@ -9,6 +9,7 @@ import './select2'
 import './hamburger'
 import './article'
 import './datepicker'
+import './table_editable'
 
 // import log from './log.js'
 

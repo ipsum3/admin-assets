@@ -182,3 +182,59 @@
         </nav>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="box">
+            <div class="box-header">
+                <h2 class="box-title">Editable table</h2>
+
+                <div class="btn-toolbar">
+                    <button class="btn btn-outline-secondary table-editable-add" data-target="users" type="button" data-toggle="tooltip" title="Ajouter">
+                        <i class="fas fa-plus"></i>
+                    </button>&nbsp;
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="users-lignes">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][first]" value="Mark" /></td>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][last]" value="Otto" /></td>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][handle]" value="@mdo" /></td>
+                            <td><button type="button" class="users-delete btn btn-outline-danger"><i class="fa fa-trash-alt"></i></button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][first]" value="Jacob" /></td>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][last]" value="Thornton" /></td>
+                            <td><input class="form-control" type="text" name="elem[{{ $i }}][handle]" value="@fat" /></td>
+                            <td><button type="button" class="users-delete btn btn-outline-danger"><i class="fa fa-trash-alt"></i></button></td>
+                        </tr>
+
+                        <script id="users-add-template" type="x-tmpl-mustache">
+                            <tr>
+                                <td>{{ indice }}</td>
+                                <td><input class="form-control" type="text" name="elem[{{ indice }}][first]" /></td>
+                                <td><input class="form-control" type="text" name="elem[{{ indice }}][last]" /></td>
+                                <td><input class="form-control" type="text" name="elem[{{ indice }}][handle]" /></td>
+                                <td><button type="button" class="users-delete btn btn-outline-danger"><i class="fa fa-trash-alt"></i></button></td>
+                            </tr>
+                        </script>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
