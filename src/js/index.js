@@ -28,4 +28,26 @@ $(function () {
             return false
         }
     })
+
+    const $layout = $('.l-global')
+    const $toggleButton = $('#sidebar-button')
+    const $icon = $toggleButton.find('i')
+
+    if (localStorage.getItem('sidebar-collapsed') === 'true') {
+        $layout.addClass('sidebar-collapsed')
+        $icon.removeClass('fa-angle-left').addClass('fa-angle-right')
+    }
+
+    $toggleButton.on('click', function () {
+        $layout.toggleClass('sidebar-collapsed')
+
+        const isCollapsed = $layout.hasClass('sidebar-collapsed')
+        localStorage.setItem('sidebar-collapsed', isCollapsed)
+
+        if (isCollapsed) {
+            $icon.removeClass('fa-angle-left').addClass('fa-angle-right')
+        } else {
+            $icon.removeClass('fa-angle-right').addClass('fa-angle-left')
+        }
+    })
 })

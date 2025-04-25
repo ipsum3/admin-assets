@@ -11,6 +11,9 @@
                          "menu main main"
                          "menu footer-a footer-b";
 
+    &.sidebar-collapsed {
+        grid-template-columns: 80px 1fr auto;
+    }
     .brand {
         grid-area: brand;
     }
@@ -51,6 +54,18 @@
         grid-template-areas: "brand hamburger"
                      "main main"
                      "header-b footer-b";
+
+        .l-global-header-a {
+            display: none;
+        }
+
+        .l-global-footer-b {
+            background-color: white;
+            a{
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
 
         .brand {
             z-index: 10;
