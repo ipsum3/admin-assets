@@ -5,3 +5,9 @@
         margin: 0 0 .8rem 0;
     }
 }
+
+@include media-breakpoint-down(md) {
+    .main {
+        padding: 30px 10px;
+    }
+}
