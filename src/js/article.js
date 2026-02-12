@@ -127,6 +127,19 @@ function createTinymce () {
                     editor.on('change', function () {
                         editor.save() // Synchronise avec le textarea pour l'envoi du formulaire
                     })
+                    // Media
+                    let id = this.id
+                    editor.ui.registry.addButton('medias', {
+                        // text: 'Médias',
+                        tooltip: 'Médias',
+                        icon: 'image',
+                        onAction: function () {
+                            editor.windowManager.openUrl({
+                                title: 'Médias',
+                                url: document.getElementById(id).dataset.medias
+                            })
+                        }
+                    })
                 }
             })
         })

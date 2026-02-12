@@ -2,7 +2,6 @@ import * as $ from 'jquery'
 import Mustache from 'mustache'
 
 $('.table-editable-add').each(function (index) {
-    console.log('test')
     let btn = $(this)
     let target = btn.data('target')
 
