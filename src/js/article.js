@@ -87,6 +87,13 @@ function createMediaInput () {
     })
 }
 
+let tinymceCounter = 0
+
+function generateUniqueId () {
+    tinymceCounter++
+    return 'mce-' + Date.now() + '-' + tinymceCounter
+}
+
 function createTinymce () {
     const configs = [
         { selector: '.tinymce', config: configTinymce },
@@ -99,7 +106,7 @@ function createTinymce () {
 
             // 1. On génère un ID unique si absent ou générique (ex: contenant "indice")
             if (!$el.attr('id') || $el.attr('id').indexOf('indice') !== -1) {
-                const uniqueId = 'mce-' + Math.random().toString(36).substr(2, 9)
+                const uniqueId = generateUniqueId()
                 $el.attr('id', uniqueId)
             }
 
