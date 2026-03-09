@@ -105,10 +105,8 @@ function createTinymce () {
             const $el = $(this)
 
             // 1. On génère un ID unique si absent ou générique (ex: contenant "indice")
-            if (!$el.attr('id') || $el.attr('id').indexOf('indice') !== -1) {
-                const uniqueId = generateUniqueId()
-                $el.attr('id', uniqueId)
-            }
+            const uniqueId = generateUniqueId()
+            $el.attr('id', uniqueId)
 
             const id = $el.attr('id')
 
